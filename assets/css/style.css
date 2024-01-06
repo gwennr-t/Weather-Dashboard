@@ -3,17 +3,27 @@
 }
 
 .header-section {
-    background-color: rgba(53, 24, 121, 0.778);
+    background-color: rgba(24, 43, 121, 0.778);
     padding: 15px 10px 5px 5px;
 }
 
 .search-section {
-    background-color: rgba(83, 68, 118, 0.224);
     padding: 10px;
     line-height: 4;
 }
 
 .btn {
-    background-color: rgba(53, 24, 121, 0.778);
+    background-color: rgba(24, 43, 121, 0.778);
     color: rgb(255, 255, 255);
+}
+
+#current-weather, #future-weather {
+    margin: 10px;
+    border: solid 2px rgba(24, 43, 121, 0.872);
+}
+
+.five-day-forecast-card {
+    margin: 5px;
+    border: solid 2px rgba(24, 43, 121, 0.872);
+    padding: 5px;
 }
