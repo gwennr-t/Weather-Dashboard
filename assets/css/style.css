@@ -1,0 +1,19 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header-section {
+    background-color: rgba(53, 24, 121, 0.778);
+    padding: 15px 10px 5px 5px;
+}
+
+.search-section {
+    background-color: rgba(83, 68, 118, 0.224);
+    padding: 10px;
+    line-height: 4;
+}
+
+.btn {
+    background-color: rgba(53, 24, 121, 0.778);
+    color: rgb(255, 255, 255);
+}
