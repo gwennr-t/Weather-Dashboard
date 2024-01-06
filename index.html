@@ -18,7 +18,6 @@
         </div>
     </header>
     
-
     <!-- Main Section -->
     <main>
         <div class="container-fluid">
@@ -26,31 +25,73 @@
 
             <!-- Column for Search Section -->
                 <div class="search-section col-sm-4 d-flex w-20">
-
                     <!-- search form -->
                     <form id="search-form">
-                        <label>Search for a city:</label>
+                        <h2>Search for a city:</h2>
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-dark" type="submit">Search</button>
                     </form>
-
                     <!-- search history -->
-                    <div class="search-history">
-                        <ul></ul>
+                    <div class="list">
+                        <ul id="search-history"></ul>
                     </div>
                 </div>
 
             <!-- Columne for Weather Section -->
-                <div class="col-sm-8 d-flex w-80 bg-danger">
-
+                <div class="col-sm-8 d-flex justify-content-start w-80">
                     <!-- searched city current weather -->
-                    <div>
-                        <h3>City Name</h3>
+                    <div class="row container">
+                        <div>
+                           <h2 class="container-title">City Name</h2>
+                           <i id="weather-icon">icon</i> 
+                        </div>
+                        <p class="container-subtitle" id="current-city-temperature">Temperature: </p>
+                        <p class="container-subtitle" id="current-city-wind">Wind: </p>
+                        <p class="container-subtitle" id="current-city-humidity">Humidity: </p>
                     </div>
-
                     <!-- 5 day weather forecast --> 
-                    <div>
-                        <h4>5-Day Forecast</h4>
+                    <div class="row container">
+                        <h2 class="container-title">5-Day Forecast:</h2>
+                        <!-- future forecast day 1 -->
+                        <div class="five-day-forecast-card">
+                            <p class="future-date">Date</p>
+                            <i id="future-weather-icon">icon</i> 
+                            <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
+                            <p class="card-subtitle" id="future-city-wind">Wind: </p>
+                            <p class="card-subtitle" id="future-city-humidity">Humidity: </p>
+                        </div>
+                        <!-- future forecast day 2 -->
+                        <div class="five-day-forecast-card">
+                            <p class="future-date">Date</p>
+                            <i id="future-weather-icon">icon</i> 
+                            <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
+                            <p class="card-subtitle" id="future-city-wind">Wind: </p>
+                            <p class="card-subtitle" id="future-city-humidity">Humidity: </p>
+                        </div>
+                        <!-- future forecast day 3 -->
+                        <div class="five-day-forecast-card">
+                            <p class="future-date">Date</p>
+                            <i id="future-weather-icon">icon</i> 
+                            <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
+                            <p class="card-subtitle" id="future-city-wind">Wind: </p>
+                            <p class="card-subtitle" id="future-city-humidity">Humidity: </p>
+                        </div>
+                        <!-- future forecast day 4 -->
+                        <div class="five-day-forecast-card">
+                            <p class="future-date">Date</p>
+                            <i id="future-weather-icon">icon</i> 
+                            <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
+                            <p class="card-subtitle" id="future-city-wind">Wind: </p>
+                            <p class="card-subtitle" id="future-city-humidity">Humidity: </p>
+                        </div>
+                        <!-- future forecast day 5 -->
+                        <div class="five-day-forecast-card">
+                            <p class="future-date">Date</p>
+                            <i id="future-weather-icon">icon</i> 
+                            <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
+                            <p class="card-subtitle" id="future-city-wind">Wind: </p>
+                            <p class="card-subtitle" id="future-city-humidity">Humidity: </p>
+                        </div>
                     </div>
                 </div>
             </div>    
