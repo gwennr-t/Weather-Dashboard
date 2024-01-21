@@ -1,7 +1,12 @@
 # Weather-Dashboard
-<p>This is a weather dashboard. This dashboard allows the user to search for a city and view current weather conditions for that city. The user also can view future weather conditions via the 5-day forcast. Additionally, when the user clicks on a city in their search history they will again be presented with the weather conditions for that city.</p>
+This is a weather dashboard. This dashboard allows the user to search for a city and view current weather conditions for that city. The user also can view future weather conditions via the 5-day forcast. Additionally, when the user clicks on a city in their search history they will again be presented with the weather conditions for that city.
 
-<h1>URL</h1>
-https://gwennr-t.github.io/Weather-Dashboard/
+# URL
+[Weather-Dashboard](https://gwennr-t.github.io/Weather-Dashboard/)
 
-<h1>Screenshot</h1>
+# Screenshot
+
+# Credits
+This weather dashboard was made using HTML, CSS, JavaScript, and Bootstrap.
+
+Additionally, the [OpenWeather](https://openweathermap.org/forecast5) API was used to retrieve weather data for cities. 
