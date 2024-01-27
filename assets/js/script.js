@@ -70,7 +70,7 @@ var currentWeather = function(){
         })
         .then(function(data){
             var currentCityDate = data["dt_txt"];
-            var icon = data["weather"][0]["icon"];
+            var icon = data["weather"]["icon"];
             var currentTemp1 = data["main"]["temp"];
             var currentWind1 = data["wind"]["speed"];
             var currentHumidity1 = data["main"]["humidity"];
