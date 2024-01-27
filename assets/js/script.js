@@ -1,14 +1,57 @@
-// save user input to local storage
+// local storage and search history variables
+var input = document.getElementById("city-input");
+var button = document.getElementById("search-button");
+var msgDiv = document.querySelector("#msg");
+var userSearchSpan = document.getElementById("search-history");
+var searches = [];
 
+// display messages for error or success
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
+  }
 
-// variable with array for search history
-var searchHistory = [];
+// 
+function renderHistory () {
+    userSearchSpan.textContent = searches.length;
 
-// search history
-var searchHistory = 
+    for (var i = 0; i < searches.length; i++) {
+        var search = searches[i];
 
-searchHistory.push(userInput);
-localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+        var li = document.createElement("li");
+        li.textContent = search;
+    }
+}
+
+// 
+function init() {
+    var storedSearches = JSON.parse(localStorage.getItem("searches"));
+
+    if (storedSearches !== null) {
+        searches = storedSearches;
+    }
+    renderHistory();
+}
+
+function storeSearches() {
+    localStorage.setItem("searches", JSON.stringify(searches));
+}
+
+button.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var search = userSearchSpan.value;
+
+    if (search === "") {
+        displayMessage("error", "Please enter a valid city name.")
+    } else {
+        displayMessage("success", "Enjoy the weather!")
+
+        localStorage.setItem("search", searches);
+        renderHistory();
+    }
+});
+
 
 // API key variable
 var apiKey = "53cebe99512b622d37b87c20ca19d2a4";
@@ -18,63 +61,48 @@ var currentWeather = function(){
     var cityLat = response.coord.lat;
     var cityLon = response.coord.lon;
 
-    fetch("https://api.openweathermap.org/data/2.5/forecast?lat=" + cityLat + "&lon=" + cityLon + "&appid=" + apiKey)
+    fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial")
         .then(function(response){
             return response.json();
         })
         .then(function(response){
-            var currentCityDate = 
-            var icon = 
-            var currentTemp = 
-            var currentWind = 
-            var currentHumidity = 
+            var currentCityDate = document.querySelector(".current-city-date");
+            var icon = document.querySelector("#icon");
+            var currentTemp = document.querySelector("#current-city-temperature");
+            var currentWind = document.querySelector("#current-city-wind");
+            var currentHumidity = document.querySelector("#current-city-humidity");
 
-            currentCityDate.text()
-            icon.text()
-            currentTemp.text()
-            currentWind.text()
-            currentHumidity.text()
+            currentCityDate.innerHTML = response[""];
+            icon.innerHTML = response[""];
+            currentTemp.innerHTML = response[""];
+            currentWind.innerHTML = response[""];
+            currentHumidity.innerHTML = response[""];
 
         })
+    console.log(response)
 }
 
 // function to search API - 5 Day Forecast
 var fiveDayForecast = function(){
-    fetch("http://api.openweathermap.org/data/2.5/forecast?q=milwaukee&appid=" + apiKey + "&units=imperial")
+    fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial")
         .then(function(response){
             return response.json();
         }) 
         .then(function(data){
             for(var i = 0; i < 5; i++) {
-                var futureDate = 
-                var futureIcon =
-                var futureTemp = 
-                var futureWind = 
-                var futureHumidity =
+                var futureDate = document.querySelector("#future-" + i);
+                var futureIcon = document.querySelector("#future-icon-" + i);
+                var futureTemp = document.querySelector("#future-temp-" + i);
+                var futureWind = document.querySelector("#future-wind-" + i);
+                var futureHumidity = document.querySelector("#future-humidity-" + i);
                 
-                futureDate.text()
-                futureIcon.text()
-                futureTemp.text()
-                futureWind.text()
-                futureHumidity.text()
+                futureDate.innerHTML = response[""];
+                futureIcon.innerHTML = response[""];
+                futureTemp.innerHTML = response[""];
+                futureWind.innerHTML = response[""];
+                futureHumidity.innerHTML = response[""];
             }
         });
 
 }
 
-// clicking search button - done
-// function handleSearchFormSubmit(event) {
-//     event.preventDefault();
-
-//     var userInputVal = document.querySelector("#city-input").value;
-
-//     if(!userInputVal) {
-//         console.error("You need a search input value!");
-//         return;
-//     }
-//     searchAPI(userInputVal);
-// }
-
-// var searchForm = document.querySelector("#search-form");
-
-// searchForm.addEventListener("search", handleSearchFormSubmit);

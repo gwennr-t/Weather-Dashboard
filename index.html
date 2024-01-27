@@ -28,11 +28,12 @@
                     <!-- search form -->
                     <form id="search-form">
                         <h2>Search for a city:</h2>
-                        <input class="form-control me-2" id="city-input" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-dark" id="search-button" type="submit">Search</button>
+                        <input class="form-control me-2 mb-4" id="city-input" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark mb-4" id="search-button" type="submit">Search</button>   
+                        <div id="msg"></div>
+                        <h2>Search History:</h2>
+                        <p><span id="search-history"> </span></p>
                     </form>
-                    <!-- search history -->
-                    <div id="search-history"></div>
                 </div>
 
             <!-- Column for Weather Section -->
@@ -40,7 +41,7 @@
                     <!-- searched city current weather -->
                     <div class="container" id="current-weather">
                         <div id = "current-weather-title-container">
-                           <h2 class="container-title"></h2>
+                           <h2 class="current-city-date"></h2>
                            <img id="icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
                         </div>
                         <p class="container-subtitle" id="current-city-temperature">Temperature: </p>
@@ -55,7 +56,7 @@
                         <!-- future forecast day 1 -->
                         <div class="container d-flex">
                             <div class="five-day-forecast-card">
-                                <p class="future-date" id="future-1">DD/MM/YYYY</p>
+                                <p class="future-date" id="future-1"> </p>
                                 <img id="icon-1" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
                                 <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
                                 <p class="card-subtitle" id="future-city-wind">Wind: </p>
@@ -63,7 +64,7 @@
                             </div>
                             <!-- future forecast day 2 -->
                             <div class="five-day-forecast-card">
-                                <p class="future-date" id="future-2">DD/MM/YYYY</p>
+                                <p class="future-date" id="future-2"> </p>
                                 <img id="icon-2" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
                                 <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
                                 <p class="card-subtitle" id="future-city-wind">Wind: </p>
@@ -71,7 +72,7 @@
                             </div>
                             <!-- future forecast day 3 -->
                             <div class="five-day-forecast-card">
-                                <p class="future-date" id="future-3">DD/MM/YYYY</p>
+                                <p class="future-date" id="future-3"> </p>
                                 <img id="icon-3" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
                                 <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
                                 <p class="card-subtitle" id="future-city-wind">Wind: </p>
@@ -79,7 +80,7 @@
                             </div>
                             <!-- future forecast day 4 -->
                             <div class="five-day-forecast-card">
-                                <p class="future-date" id="future-4">DD/MM/YYYY</p>
+                                <p class="future-date" id="future-4"> </p>
                                 <img id="icon-4" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"> 
                                 <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
                                 <p class="card-subtitle" id="future-city-wind">Wind: </p>                            
@@ -87,7 +88,7 @@
                             </div>
                             <!-- future forecast day 5 -->
                             <div class="five-day-forecast-card">
-                                <p class="future-date" id="future-5">DD/MM/YYYY</p>
+                                <p class="future-date" id="future-5"> </p>
                                 <img id="icon-5" src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon"> 
                                 <p class="card-subtitle" id="future-city-temperature">Temperature: </p>
                                 <p class="card-subtitle" id="future-city-wind">Wind: </p>
